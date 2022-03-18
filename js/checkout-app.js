@@ -4,11 +4,11 @@
 
 if (typeof module === "undefined") {
     // Declare root object
-    var lateRooms;
-    // Initialise root lateRooms object, checks if already exists
-    lateRooms = lateRooms || {};
+    var fruits;
+    // Initialise root object, checks if already exists
+    fruits = fruits || {};
     // Declare and initialise kata object
-    lateRooms.kata = lateRooms.kata || {};
+    fruits.kata = fruits.kata || {};
     // Declare and initialise checkout object
-    lateRooms.kata.checkout = {};
+    fruits.kata.checkout = {};
 }

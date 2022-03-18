@@ -24,12 +24,10 @@
         <p>Table</p>
         <pre class="language-javascript"><code class="language-javascript">
         var sku;
-        var rules;
         var order;
         var bill;
 
         sku = checkout.stockKeepingUnits;
-        rules = checkout.chargeRules;
         order = checkout.order;
         bill = checkout.billing;
 
@@ -41,7 +39,6 @@
         });
 
         order.setSKU(sku.get());
-        order.setRules(rules);
 
         order.add("B");
         bill.addCharge("order", order.charge()).update();
@@ -68,12 +65,10 @@
         <p>Table</p>
         <pre class="language-javascript"><code class="language-javascript">
         var sku;
-        var rules;
         var order;
         var bill;
 
         sku = checkout.stockKeepingUnits;
-        rules = checkout.chargeRules;
         order = checkout.order;
         bill = checkout.billing;
 
@@ -85,7 +80,6 @@
         });
 
         order.setSKU(sku.get());
-        order.setRules(rules);
 
         order.add("B");
         bill.addCharge("order", order.charge()).update();
@@ -116,12 +110,10 @@
         <p>Code:</p>
         <pre class="language-javascript"><code class="language-javascript">
         var sku;
-        var rules;
         var order;
         var bill;
 
         sku = checkout.stockKeepingUnits;
-        rules = checkout.chargeRules;
         order = checkout.order;
         bill = checkout.billing;
 
@@ -133,7 +125,6 @@
         });
 
         order.setSKU(sku.get());
-        order.setRules(rules);
 
         order.add("B");
         bill.addCharge("order", order.charge()).update();
@@ -158,12 +149,10 @@
         <p>Table</p>
         <pre class="language-javascript"><code class="language-javascript">
         var sku;
-        var rules;
         var order;
         var bill;
 
         sku = checkout.stockKeepingUnits;
-        rules = checkout.chargeRules;
         order = checkout.order;
         bill = checkout.billing;
 
@@ -201,7 +190,6 @@
         });
 
         order.setSKU(sku.get());
-        order.setRules(rules);
 
         order.add("A").add("B").add("A").add("A").add("B").add("B").add("A").add("D").add("C").add("D").add("C");
         bill.addCharge("order", order.charge()).update();
@@ -220,12 +208,10 @@
             // Simple stock keeping units of two item types, no discounts
             (function(checkout) {
                 var sku;
-                var rules;
                 var order;
                 var bill;
 
                 sku = checkout.stockKeepingUnits;
-                rules = checkout.chargeRules;
                 order = checkout.order;
                 bill = checkout.billing;
 
@@ -243,7 +229,6 @@
                 });
 
                 order.setSKU(sku.get());
-                order.setRules(rules);
 
                 order.add("B");
                 order.add("A");
@@ -256,17 +241,15 @@
 
                 $("#example1 .bill").html(bill.get());
 
-            }(lateRooms.kata.checkout));
+            }(fruits.kata.checkout));
 
             // Demonstrates updating of bill as items are added to order
             (function(checkout) {
                 var sku;
-                var rules;
                 var order;
                 var bill;
 
                 sku = checkout.stockKeepingUnits;
-                rules = checkout.chargeRules;
                 order = checkout.order;
                 bill = checkout.billing;
 
@@ -284,7 +267,6 @@
                 });
 
                 order.setSKU(sku.get());
-                order.setRules(rules);
 
                 order.add("B");
                 bill.addCharge("order", order.charge()).update();
@@ -304,17 +286,15 @@
                 bill.addCharge("order", order.charge()).update();
                 $("#example2 .bill5").html(bill.get());
 
-            }(lateRooms.kata.checkout));
+            }(fruits.kata.checkout));
 
             // Demonstrates updating of bill after changes in stock keeping unit prices
             (function(checkout) {
                 var sku;
-                var rules;
                 var order;
                 var bill;
 
                 sku = checkout.stockKeepingUnits;
-                rules = checkout.chargeRules;
                 order = checkout.order;
                 bill = checkout.billing;
 
@@ -332,7 +312,6 @@
                 });
 
                 order.setSKU(sku.get());
-                order.setRules(rules);
 
                 order.add("B");
                 bill.addCharge("order", order.charge()).update();
@@ -346,17 +325,15 @@
                 sku.setUnitProperty("A", "price", 30);
                 bill.addCharge("order", order.charge()).update();
                 $("#example3 .bill4").html(bill.update().get());
-            }(lateRooms.kata.checkout));
+            }(fruits.kata.checkout));
 
             // Demonstrates calculation of bill from orders with discount options in stock keeping unit prices
             (function(checkout) {
                 var sku;
-                var rules;
                 var order;
                 var bill;
 
                 sku = checkout.stockKeepingUnits;
-                rules = checkout.chargeRules;
                 order = checkout.order;
                 bill = checkout.billing;
 
@@ -394,12 +371,11 @@
                 });
 
                 order.setSKU(sku.get());
-                order.setRules(rules);
 
                 order.add("A").add("B").add("A").add("A").add("B").add("B").add("A").add("D").add("C").add("D").add("C");
                 bill.addCharge("order", order.charge()).update();
                 $("#example4 .bill").html(bill.get());
-            }(lateRooms.kata.checkout));
+            }(fruits.kata.checkout));
         });
     </script>
 </body>
