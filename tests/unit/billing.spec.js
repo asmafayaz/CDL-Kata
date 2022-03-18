@@ -1,4 +1,4 @@
-describe("Tests for checkout-billing module", function() {
+describe("Tests for billing module", function() {
 
     "use strict";
 
@@ -15,9 +15,9 @@ describe("Tests for checkout-billing module", function() {
             bill = lateRooms.kata.checkout.billing;
         } else {
             expect = require("chai").expect;
-            sku = require("../../js/checkout-stockkeepingunits");
-            order = require("../../js/checkout-order");
-            bill = require("../../js/checkout-billing");
+            sku = require("../../js/stockkeepingunits");
+            order = require("../../js/order");
+            bill = require("../../js/billing");
         }
     });
 
@@ -27,7 +27,7 @@ describe("Tests for checkout-billing module", function() {
         bill.clear();
     });
 
-    it("Calculating a simple bill with single item type in order, no discounts", function() {
+    it("Calculating a simple bill with single item type, no discounts", function() {
         var key1;
 
         key1 = "A";
@@ -41,7 +41,7 @@ describe("Tests for checkout-billing module", function() {
         expect(bill.get()).to.equal(100);
     });
 
-    it("Calculating a simple bill with multiple item type in order, no discounts", function() {
+    it("Calculating a simple bill with multiple item type, no discounts", function() {
         var key1;
         var key2;
         var key3;
@@ -63,7 +63,7 @@ describe("Tests for checkout-billing module", function() {
         expect(bill.get()).to.equal(195);
     });
 
-    it("Calculating a bill with single item type in order, with discount but discount limit not reached", function() {
+    it("Calculating a bill with single item type, with discount but discount limit not reached", function() {
         var key1;
 
         key1 = "A";
@@ -88,7 +88,7 @@ describe("Tests for checkout-billing module", function() {
         expect(bill.get()).to.equal(100);
     });
 
-    it("Calculating a bill with single item type in order, with discount and discount limit reached", function() {
+    it("Calculating a bill with single item type, with discount and discount limit reached", function() {
         var key1;
 
         key1 = "A";
@@ -113,7 +113,7 @@ describe("Tests for checkout-billing module", function() {
         expect(bill.get()).to.equal(130);
     });
 
-    it("Calculating a bill with single item type in order, with discount and discount limit exceeded", function() {
+    it("Calculating a bill with single item type, with discount and discount limit exceeded", function() {
         var key1;
 
         key1 = "A";
@@ -138,7 +138,7 @@ describe("Tests for checkout-billing module", function() {
         expect(bill.get()).to.equal(230);
     });
 
-    it("Calculating a bill with single item type in order, with discount and discount limit exceeded twice", function() {
+    it("Calculating a bill with single item type, with discount and discount limit exceeded twice", function() {
         var key1;
 
         key1 = "A";
@@ -163,7 +163,7 @@ describe("Tests for checkout-billing module", function() {
         expect(bill.get()).to.equal(260);
     });
 
-    it("Calculating a bill with two item types in order, with and without discount and discount limit exceeded", function() {
+    it("Calculating a bill with two item types, with and without discount and discount limit exceeded", function() {
         var key1;
         var key2;
 
@@ -201,7 +201,7 @@ describe("Tests for checkout-billing module", function() {
 
     });
 
-    it("Calculating a bill with four item types in order, with and without discount and discount limit exceeded", function() {
+    it("Calculating a bill with four item types, with and without discount and discount limit exceeded", function() {
         var key1;
         var key2;
         var key3;
@@ -250,7 +250,7 @@ describe("Tests for checkout-billing module", function() {
         expect(bill.get()).to.equal(355);
     });
 
-    it("Calculating a simple bill with single item type in order", function() {
+    it("Calculating a simple bill with single item type", function() {
         var key1;
 
         key1 = "A";
@@ -273,7 +273,7 @@ describe("Tests for checkout-billing module", function() {
         expect(bill.get()).to.equal(75);
     });
 
-    it("Calculating a simple bill with multiple item types in order", function() {
+    it("Calculating a simple bill with multiple item types", function() {
         var key1;
         var key2;
 
@@ -306,7 +306,7 @@ describe("Tests for checkout-billing module", function() {
         expect(bill.get()).to.equal(220);
     });
 
-    it("Calculating a simple bill with single item type in order", function() {
+    it("Calculating a simple bill with single item type", function() {
         var key1;
 
         key1 = "A";
@@ -331,7 +331,7 @@ describe("Tests for checkout-billing module", function() {
         expect(bill.get()).to.equal(75);
     });
 
-    it("Calculating a simple bill with single item type in order", function() {
+    it("Calculating a simple bill with single item type", function() {
         var key1;
 
         key1 = "A";
@@ -356,7 +356,7 @@ describe("Tests for checkout-billing module", function() {
         expect(bill.get()).to.equal(80);
     });
 
-    it("Calculating a simple bill with single item type in order", function() {
+    it("Calculating a simple bill with single item type", function() {
         var key1;
 
         key1 = "A";

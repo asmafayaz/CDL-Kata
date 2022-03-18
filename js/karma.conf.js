@@ -14,9 +14,9 @@ module.exports = function(config) {
         files: [
             "node_modules/chai/mocha.js",
             "node_modules/chai/chai.js",
-            "js/checkout-app.js",
-            "js/checkout-order.js",
-            "js/checkout-billing.js",
+            "js/app.js",
+            "js/order.js",
+            "js/billing.js",
             "tests/**/*.spec.js"
         ],
 

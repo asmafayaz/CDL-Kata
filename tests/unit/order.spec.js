@@ -1,4 +1,4 @@
-describe("Tests for checkout-orders module", function() {
+describe("Tests for orders module", function() {
 
     "use strict";
 
@@ -11,7 +11,7 @@ describe("Tests for checkout-orders module", function() {
             order = lateRooms.kata.checkout.order;
         } else {
             expect = require("chai").expect;
-            order = require("../../js/checkout-order");
+            order = require("../../js/order");
         }
     });
 
