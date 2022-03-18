@@ -1,0 +1,51 @@
+{
+    "lockfileVersion": 1,
+    "dependencies": {
+        "assertion-error": {
+            "integrity": "sha1-E8pRXYYgbaC6xm6DTdOX2HWBCUw=",
+            "resolved": "https://registry.npmjs.org/assertion-error/-/assertion-error-1.0.2.tgz",
+            "version": "1.0.2"
+        },
+        "check-error": {
+            "integrity": "sha1-V00xLt2Iu13YkS6Sht1sCu1KrII=",
+            "resolved": "https://registry.npmjs.org/check-error/-/check-error-1.0.2.tgz",
+            "version": "1.0.2"
+        },
+        "deep-eql": {
+            "dependencies": {
+                "type-detect": {
+                    "integrity": "sha1-RtDMhVOrt7E6NSsNbeov1Y8tm1U=",
+                    "resolved": "https://registry.npmjs.org/type-detect/-/type-detect-3.0.0.tgz",
+                    "version": "3.0.0"
+                }
+            },
+            "integrity": "sha1-sbrAblbwp2d3aG1Qyf63XC7XZ5o=",
+            "resolved": "https://registry.npmjs.org/deep-eql/-/deep-eql-2.0.2.tgz",
+            "version": "2.0.2"
+        },
+        "get-func-name": {
+            "integrity": "sha1-6td0q+5y4gQJQzoGY2YCPdaIekE=",
+            "resolved": "https://registry.npmjs.org/get-func-name/-/get-func-name-2.0.0.tgz",
+            "version": "2.0.0"
+        },
+        "pathval": {
+            "integrity": "sha1-uULm1L3mUwBe9rcTYd74cn0GReA=",
+            "resolved": "https://registry.npmjs.org/pathval/-/pathval-1.1.0.tgz",
+            "version": "1.1.0"
+        },
+        "type-detect": {
+            "integrity": "sha1-Dj8mcLRAmbC0bChNE2p+9Jx0wuo=",
+            "resolved": "https://registry.npmjs.org/type-detect/-/type-detect-4.0.3.tgz",
+            "version": "4.0.3"
+        }
+    },
+    "devDependencies": {
+        "chai": "^4.1.0",
+        "karma": "^1.7.0",
+        "karma-chrome-launcher": "^2.2.0",
+        "karma-coverage": "^1.1.1",
+        "karma-mocha": "^1.3.0",
+        "karma-phantomjs-launcher": "^1.0.4",
+        "mocha": "^3.4.2"
+    }
+}
